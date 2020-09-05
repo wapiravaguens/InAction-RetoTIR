@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 
 // Components
 import Sidebar from './components/sidebar/sidebar.component';
+import SidebarButton from './components/sidebar-button/sidebar-button.component';
 
-function App() {
+const App = () => {
+  const [hidden, setHidden] = useState(false);
+
   return (
     <div className='app'>
+    
       <Sidebar />
-      <div className='content'></div>
+      <div className='content'>
+        <SidebarButton />
+      </div>
+
     </div>
   );
 }

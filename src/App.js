@@ -6,14 +6,13 @@ import Sidebar from './components/sidebar/sidebar.component';
 import SidebarButton from './components/sidebar-button/sidebar-button.component';
 
 const App = () => {
-  const [hidden, setHidden] = useState(false);
-
   return (
     <div className='app'>
     
       <Sidebar />
+
       <div className='content'>
-        <SidebarButton />
+          <SidebarButton />
       </div>
 
     </div>

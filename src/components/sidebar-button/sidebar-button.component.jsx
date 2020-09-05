@@ -1,12 +1,27 @@
 import React from 'react';
 import './sidebar-button.styles.scss';
 
-const SidebarButton = () => {
+// Redux
+import { connect } from 'react-redux';
+
+// Actions
+import { toggleSidebar } from '../../redux/sidebar/sidebar.actions' ;
+
+
+const SidebarButton = ({ hidden, toggleSidebar }) => {
 	return (
-		<button className='sidebar-button'>
+		<button onClick={() => toggleSidebar(!hidden)} className='sidebar-button'>
 			<ion-icon name="menu"></ion-icon>
 		</button>
 	)
 }
 
-export default SidebarButton;
+const mapStateToProps = ({ sidebar }) => ({
+	hidden: sidebar.hidden,
+});
+
+const mapDispatchToProps = dispatch => ({
+	toggleSidebar: hidden => dispatch(toggleSidebar(hidden)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarButton);

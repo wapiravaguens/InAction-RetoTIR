@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.scss';
 
 import { Switch, Route } from 'react-router-dom';
+
+import { connect } from 'react-redux';
 
 // Components
 import Sidebar from './components/sidebar/sidebar.component';
@@ -12,15 +14,18 @@ import Calc from './pages/calc/calc.component';
 import Dividends from './pages/dividends/dividends.component';
 import Indicators from './pages/indicators/indicators.component';
 
-const App = () => {
+const App = ({ hidden }) => {
   return (
     <div className='app'>
     
       <Sidebar />
 
-      <div className='content'>
-          <SidebarButton />
-          <div className='pages'>
+      <div className={`content ${hidden ? 'content--extended' : ''}`}>
+            <div className='top-bar'>
+              <SidebarButton />
+            </div>
+
+          <div className='pages' >
             <Switch>
               <Route exact path='/' component={Calc} />
               <Route exact path='/dividends' component={Dividends} />
@@ -33,4 +38,8 @@ const App = () => {
   );
 }
 
-export default App;
+const mapStateToProps = ({ sidebar }) => ({
+	hidden: sidebar.hidden,
+});
+
+export default connect(mapStateToProps)(App);

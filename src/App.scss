@@ -1,13 +1,23 @@
+$base-color: #c6538c;
+
 .app {
 	display: flex;
 	min-width: 100vw;
 	min-height: 100vh;
 	width: 100%;
 	height: 100%;	
+
+	.content {
+		background-color: $base-color;
+		flex-grow: 1;
+		position: relative;
+		padding: 70px 15px 15px 15px;
+
+		.pages {
+			width: 100%;
+			height: 100%;
+			background-color: orange;
+		}
+	}
 }
 
-.content {
-	background-color: lightgray;
-	flex-grow: 1;
-	position: relative;
-}

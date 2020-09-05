@@ -3,7 +3,7 @@ import './calc.styles.scss';
 
 const Calc = () => {
 	return (
-		<div>
+		<div className='calc'>
 			Calc
 		</div>
 	)

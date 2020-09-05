@@ -1,5 +1,7 @@
+$base-color: teal;
+
 .sidebar {
-	background-color: teal;
+	background-color: $base-color;
 	width: 250px;
 	flex-shrink: 0;
 }

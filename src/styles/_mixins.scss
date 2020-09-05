@@ -1,0 +1,21 @@
+@mixin calc-container {
+	background-color: $background-gray;
+	border: 1px solid lightgray;
+	width: 100%;
+
+	@media only screen and (max-width: 600px) {
+		& {
+			width: auto;
+		}
+	}
+}
+
+@mixin calc-flex-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+

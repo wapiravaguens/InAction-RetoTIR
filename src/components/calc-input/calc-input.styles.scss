@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.calc-input {
+	@include calc-container;
+
+	.calc-input__form {
+		@include calc-flex-container;
+	
+		.calc_input__date {
+			display: flex;
+			align-items: center;
+			width: 300px;
+	
+			label {
+				font-size: 1.4rem;
+				font-weight: 600;
+				margin: 0px 10px 0px 0px;
+			}
+	
+		}
+	
+		button {
+			width: auto;
+		}
+	
+		.calc-input__TIR {
+			width: auto;
+			
+			h3 {
+				background-color: green;
+				padding: 5px;
+				margin: 0px;
+			}
+	
+		}
+	
+		div {
+			margin: 10px 15px;
+		}
+	}
+}
+

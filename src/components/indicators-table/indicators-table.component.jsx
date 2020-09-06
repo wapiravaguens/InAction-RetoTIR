@@ -6,7 +6,6 @@ const IndicatorsTable = ({ indicators }) => {
 		<table className="table">
 			<thead className="thead-dark">
 				<tr>
-					<th scope="col">#</th>
 					<th scope="col">Fecha</th>
 					<th scope="col">Valor</th>
 				</tr>
@@ -15,9 +14,8 @@ const IndicatorsTable = ({ indicators }) => {
 				{
 					indicators.map((indicator, index) => (
 						<tr key={index}>
-							<th scope="row">{index + 1}</th>
-							<td>{indicator.Fecha}</td>
-							<td>{indicator.Valor}</td>
+							<td>{indicator.date}</td>
+							<td>{indicator.value.toFixed(2)}</td>
 						</tr>
 					))
 				}

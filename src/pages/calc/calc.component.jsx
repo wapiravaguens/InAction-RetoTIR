@@ -1,28 +1,38 @@
 import React from 'react';
 import './calc.styles.scss';
 
+import { connect } from 'react-redux'
+
 // Components
 import CalcInput from '../../components/calc-input/calc-input.component';
-import CalcTransitionInput from '../../components/calc-transation-input/calc-transation-input.component';
-import TransationsTable from '../../components/transations-table/transations-table.component';
+import CalcTransitionInput from '../../components/calc-transaction-input/calc-transaction-input.component';
+import TransactionsTable from '../../components/transactions-table/transactions-table.component';
 
-import { transations } from '../../data/transations';
+import { RemoveTransaction } from '../../redux/transactions/transactions.actions';
 
-const Calc = () => {
+const Calc = ({ transactions, removeTransaction }) => {
 	return (
 		<div className='calc container-sm'>
 			<div className='row justify-content-sm-center'>
-				<CalcInput />
+				<CalcInput transactions={transactions} />
 			</div>
 			<div className='row justify-content-sm-center'>
 				<CalcTransitionInput />
 			</div>
 			<div className='row justify-content-sm-center'>
-				<TransationsTable transations={transations}	/>
+				<TransactionsTable transactions={transactions}	handleRemove={removeTransaction}/>
 			</div>
 		</div>
 		
 	)
 }
 
-export default Calc;
+const mapStateToProps = ({ transactions }) => ({
+	transactions: transactions.transactions
+});
+
+const mapDispatchToProps = dispatch => ({
+	removeTransaction: id => dispatch(RemoveTransaction(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Calc);

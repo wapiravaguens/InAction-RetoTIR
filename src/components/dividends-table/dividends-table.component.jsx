@@ -6,7 +6,6 @@ const DividendsTable = ({ dividends }) => {
 		<table className="table">
 			<thead className="thead-dark">
 				<tr>
-					<th scope="col">#</th>
 					<th scope="col">Fecha</th>
 					<th scope="col">Valor</th>
 				</tr>
@@ -15,9 +14,8 @@ const DividendsTable = ({ dividends }) => {
 				{
 					dividends.map((dividend, index) => (
 						<tr key={index}>
-							<th scope="row">{index + 1}</th>
-							<td>{dividend.Fecha}</td>
-							<td>{dividend.Valor}</td>
+							<td>{dividend.date}</td>
+							<td>{dividend.value.toFixed(2)}</td>
 						</tr>
 					))
 				}

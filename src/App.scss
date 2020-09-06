@@ -13,6 +13,7 @@
 
 		.top-bar {
 			position: sticky;
+			z-index: 99;
 			top: 0;
 			height: 70px;
 			
@@ -21,6 +22,8 @@
 			-webkit-box-shadow: 0px 5px 10px -9px rgba(122,122,122,0.5);
 			-moz-box-shadow: 0px 5px 10px -9px rgba(122,122,122,0.5);
 			box-shadow: 0px 5px 10px -9px rgba(122,122,122,0.5);
+
+		
 		}
 
 		.pages {
@@ -31,7 +34,6 @@
 			display: flex;
 			justify-content: center;
 			overflow: hidden;
-			border: 1px solid red;
 		}
 
 	}

@@ -13,8 +13,6 @@
 			width: 300px;
 	
 			label {
-				font-size: 1.4rem;
-				font-weight: 600;
 				margin: 0px 10px 0px 0px;
 			}
 	
@@ -28,9 +26,21 @@
 			width: auto;
 			
 			h3 {
-				background-color: green;
 				padding: 5px;
 				margin: 0px;
+			}
+
+			.calc-input__TIR-value {
+				padding: 5px;
+				margin: 5px;
+			}
+
+			.positive {
+				background-color: lightgreen;
+			}
+
+			.negative {
+				background-color: lightcoral;
 			}
 	
 		}

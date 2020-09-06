@@ -4,7 +4,7 @@ import './indicators.styles.scss';
 // Components
 import IndicatorsTable from '../../components/indicators-table/indicators-table.component';
 
-import { indicadores } from '../../data/indicadores';
+import { indicators } from '../../data/indicators';
 
 const Indicators = () => {
 	return (
@@ -15,7 +15,7 @@ const Indicators = () => {
 			</div>
 
 			<div className='row justify-content-sm-center'>
-				<IndicatorsTable indicators={indicadores}/>
+				<IndicatorsTable indicators={indicators}/>
 			</div>
 
 		</div>

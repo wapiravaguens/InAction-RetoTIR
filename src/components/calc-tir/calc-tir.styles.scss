@@ -1,10 +1,10 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.calc-input {
+.calc-tir {
 	@include calc-container;
 
-	.calc-input__form {
+	.calc-tir__form {
 		@include calc-flex-container;
 	
 		.calc_input__date {
@@ -22,7 +22,7 @@
 			width: auto;
 		}
 	
-		.calc-input__TIR {
+		.calc-tir__text {
 			width: auto;
 			
 			h3 {
@@ -30,7 +30,7 @@
 				margin: 0px;
 			}
 
-			.calc-input__TIR-value {
+			.calc-tir__text-value {
 				padding: 5px;
 				margin: 5px;
 			}

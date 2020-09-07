@@ -1,6 +1,6 @@
 import { SidebarActionTypes } from './sidebar.types';
 
-export const toggleSidebar = hidden => ({
+export const toggleSidebar = () => ({
   type: SidebarActionTypes.TOGGLE_SIDEBAR,
-  payload: hidden
+  payload: null
 });

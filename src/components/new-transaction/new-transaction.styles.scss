@@ -1,10 +1,10 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.calc-transaction-input {
+.new-transaction {
 	@include calc-container;
 
-	.calc-transaction-input__form {
+	.new-transaction__form {
 		@include calc-flex-container;
 		
 		div {

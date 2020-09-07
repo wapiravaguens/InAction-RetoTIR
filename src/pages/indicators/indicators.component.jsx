@@ -1,7 +1,6 @@
 import React from 'react';
 import './indicators.styles.scss';
 
-// Components
 import IndicatorsTable from '../../components/indicators-table/indicators-table.component';
 
 import { indicators } from '../../data/indicators';

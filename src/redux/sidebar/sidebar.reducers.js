@@ -9,7 +9,7 @@ const sidebarReducer = (state = INITIAL_STATE, action) => {
     case SidebarActionTypes.TOGGLE_SIDEBAR:
       return {
         ...state,
-        hidden: action.payload
+        hidden: !state.hidden
       };
     default:
       return state;

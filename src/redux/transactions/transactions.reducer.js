@@ -9,12 +9,12 @@ const INITIAL_STATE = {
 
 const transactionsReducer = (state = INITIAL_STATE, action) => {
 	switch(action.type) {
-		case TransactionActionTypes.ADD_TRANSATION:
+		case TransactionActionTypes.ADD_TRANSACTION:
 			return {
 				...state,
 				transactions: addTransaction(state.transactions, action.payload)
 			};
-		case TransactionActionTypes.REMOVE_TRANSATION:
+		case TransactionActionTypes.REMOVE_TRANSACTION:
 			return {
 				...state,
 				transactions: removeTransaction(state.transactions, action.payload)

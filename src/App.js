@@ -21,9 +21,9 @@ const App = ({ hidden }) => {
       <Sidebar />
 
       <div className={`content ${hidden ? 'content--extended' : ''}`}>
-            <div className='top-bar'>
-              <SidebarButton />
-            </div>
+          <div className='top-bar'>
+            <SidebarButton />
+          </div>
 
           <div className='pages' >
             <Switch>
